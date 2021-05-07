@@ -6,7 +6,6 @@ import android.util.Base64
 
 
 /** Converts from Base64 */
-@Suppress("MagicNumber")
 fun String.toBitmap(): Bitmap? {
     return Base64.decode(this, Base64.DEFAULT)?.let {
         BitmapFactory.decodeByteArray(it, 0, it.size)
